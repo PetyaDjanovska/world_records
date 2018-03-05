@@ -1,5 +1,4 @@
-require "world_records/version"
-
-module WorldRecords
-  # Your code goes here...
-end
+require_relative "./world_records/version"
+require_relative "./world_records/cli"
+require_relative "./world_records/record"
+require_relative "./world_records/scraper"
