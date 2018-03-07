@@ -3,7 +3,7 @@
 class WorldRecords::CLI
 
   def call
-    puts "World records in sports:"
+    puts "WORLD RECORDS IN SPORTS:".colorize(:red)
     WorldRecords::Scraper.scrape_index_page
     list_records
     input = nil
@@ -18,7 +18,7 @@ class WorldRecords::CLI
           puts "To read more about a record - type its number, to see the list again - type list, type exit to leave!"
         end
      end
-    puts "Good bye!"
+    puts "GOOD BYE!".colorize(:blue)
   end
      
        
@@ -27,16 +27,19 @@ class WorldRecords::CLI
     records.each.with_index do |record,i|
       puts "#{i+1}. #{record.title}"
     end
+    puts "\n"
   end
 
   def display_record(number)
     selected_record = WorldRecords::Record.find_by_number(number)
     url = selected_record.url
     selected_record.add_details(WorldRecords::Scraper.scrape_record_page(url))
-    puts "#{selected_record.title.upcase}"
-    puts "WHO - #{selected_record.who.upcas}"
-    puts "WHEN - #{selected_record.when}"
-    puts "#{selected_record.text}"
+    puts "\n"
+    puts "#{selected_record.title.upcase}".colorize(:red)
+    puts "WHO - #{selected_record.who.upcase}".colorize(:blue)
+    puts "WHEN - #{selected_record.when}".colorize(:blue)
+    puts "#{selected_record.text}".colorize(:green)
+    puts "\n"
   end
 
 end

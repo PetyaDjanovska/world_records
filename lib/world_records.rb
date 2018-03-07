@@ -1,5 +1,6 @@
 require "nokogiri"
 require "open-uri"
+require 'colorize'
 
 require_relative "./world_records/version"
 require_relative "./world_records/cli"
