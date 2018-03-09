@@ -4,12 +4,10 @@ class WorldRecords::Scraper
 
   def self.scrape_index_page
     page = Nokogiri::HTML(open("http://www.guinnessworldrecords.com/records/showcase/sports-and-strength"))
-    # records = []
     page.css("div.masonry a").each do |article|
       title = article.css("figure.result-media img").attribute("alt").text
       url = "http://www.guinnessworldrecords.com" + article.attribute("href").value
       record = WorldRecords::Record.new(title, url)
-      # students << student
     end
     WorldRecords::Record.all
   end  

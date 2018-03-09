@@ -14,8 +14,6 @@ class WorldRecords::CLI
           display_record(input)
         elsif input == "list"
           list_records
-        else
-          puts "To read more about a record - type its number, to see the list again - type list, type exit to leave!"
         end
      end
     puts "GOOD BYE!".colorize(:blue)

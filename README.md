@@ -20,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To run the gem write "./bin/world-records".
+It will display a list of records and ask you for the number of record ypu would like more info on.
+Once you enter the chosen number, the title, who, when and additional text on the record will be displayed for you.
+Write "list" to see all records again, or write "exit" to leave.
 
 ## Contributing
 
@@ -29,3 +32,6 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## License
+The gem is available as open source under the terms of the MIT License.
