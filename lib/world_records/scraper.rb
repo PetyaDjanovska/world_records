@@ -21,15 +21,4 @@ class WorldRecords::Scraper
     record_details
   end
 
-  def get_text(doc)
-    
-  end
-
-  def get_who(doc)
-    
-  end
-
-  def get_when(doc)
-    
-  end
 end

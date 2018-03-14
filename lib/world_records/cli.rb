@@ -22,11 +22,18 @@ class WorldRecords::CLI
        
   def list_records
     records = WorldRecords::Record.all
-    records.each.with_index do |record,i|
+    records.each_with_index do |record,i|
       puts "#{i+1}. #{record.title}"
+      if i == 9
+        puts "\n"
+        puts "Press any key to see the rest of the list"
+        puts "\n"
+        STDIN.getch
+      end
     end
     puts "\n"
   end
+
 
   def display_record(number)
     selected_record = WorldRecords::Record.find_by_number(number)
