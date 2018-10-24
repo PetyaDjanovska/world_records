@@ -1,6 +1,6 @@
 # WorldRecords
 
-This gem will scrape info from Guiness World Records, list them and ask the user which particular record they would like to read more about.
+This gem will scrape info from Guinness World Records, list them and ask the user which particular record they would like to read more about.
 
 ## Installation
 
